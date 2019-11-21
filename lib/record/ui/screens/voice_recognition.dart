@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_app_painless/widgets/floating_action_btn.dart';
-import 'package:speech_recognition/speech_recognition.dart';
 
 class VoiceRecognition extends StatefulWidget {
   @override
@@ -24,22 +23,26 @@ class _VoiceRecognition extends State<VoiceRecognition> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               FloatingActionBtn(
-                color: 0xFFFF5722,
+                color: 0xFF000000,
                 iconData: Icons.cancel,
                 onPressed: () {},
                 mini: true,
+                bGcolor:0xFFFF5722 ,
               ),
               FloatingActionBtn(
-                color: 0xFF03A9F4,
+                bGcolor: 0xFF03A9F4,
                 iconData: Icons.mic,
                 onPressed: () {},
                 mini: false,
+                color: 0xFF000000,
               ),
               FloatingActionBtn(
-                color: 0xFFE91E63,
+                bGcolor: 0xFFE91E63,
                 iconData: Icons.stop,
                 onPressed: () {},
                 mini: true,
+                color: 0xFF000000,
+
               ),
             ],
           ),

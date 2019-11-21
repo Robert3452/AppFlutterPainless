@@ -25,8 +25,10 @@ dependencies:
   cupertino_icons: ^0.1.2
   speech_recognition: 
   flutter_sound: "^1.0.6"
+  audio_recorder: ^1.0.1
   http: 
   intl: 
+  flutter_visualizers: ^0.0.2 ##it's an improve flutter package 
   path_provider: ^0.4.0
 dev_dependencies:
   flutter_test:

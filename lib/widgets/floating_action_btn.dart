@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class FloatingActionBtn extends StatefulWidget{
   final VoidCallback onPressed;
+  var bGcolor;
   var color;
   final IconData iconData;
   bool mini;
@@ -11,13 +12,13 @@ class FloatingActionBtn extends StatefulWidget{
     @required this.onPressed,
     @required this.iconData,
     @required this.color,
+    @required this.bGcolor,
     this.mini,    
     
   });
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _FloatingActionBtn();
   }
 
@@ -25,11 +26,10 @@ class FloatingActionBtn extends StatefulWidget{
 class _FloatingActionBtn extends State<FloatingActionBtn>{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return FloatingActionButton(
-      child: Icon(widget.iconData),
+      child: Icon(widget.iconData,color: Color(widget.color),),
       mini: widget.mini,
-      backgroundColor: Color(widget.color),
+      backgroundColor: Color(widget.bGcolor),
       onPressed: widget.onPressed,
       heroTag: null,
     );
