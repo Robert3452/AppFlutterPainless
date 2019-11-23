@@ -4,10 +4,8 @@ import 'package:flutter_app_painless/record/ui/widgets/search_text_field.dart';
 class BackgroundFiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: 65,
-      // margin: EdgeInsets.symmetric(vertical: 20),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [Color(0XFF000000), Colors.black],

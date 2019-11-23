@@ -33,6 +33,7 @@ dependencies:
   path: 1.6.4
   file_picker: ^1.4.2  
   flutter_file_manager: 
+  generic_bloc_provider: ^1.0.9
   #file picker
   
 dev_dependencies:

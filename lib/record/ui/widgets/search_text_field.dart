@@ -11,7 +11,6 @@ class SearchTextField extends StatefulWidget {
       @required this.controller});
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _SearchTextField();
   }
 }
@@ -19,7 +18,6 @@ class SearchTextField extends StatefulWidget {
 class _SearchTextField extends State<SearchTextField> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10),
       margin: EdgeInsets.only(bottom: 5),

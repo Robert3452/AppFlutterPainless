@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_painless/record/ui/widgets/background_files.dart';
 import 'package:flutter_app_painless/record/ui/widgets/file_cards.dart';
-// import 'package:flutter_app_painless/record/ui/widgets/search_text_field.dart';
 
 class FileManager extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
@@ -34,7 +32,6 @@ class FileManager extends StatelessWidget {
         body: Stack(
           children: <Widget>[
             Container(
-              // height: screenHeight,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [Color(0XFF000000), Colors.black],
