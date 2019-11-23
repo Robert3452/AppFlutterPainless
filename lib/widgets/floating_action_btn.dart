@@ -32,6 +32,7 @@ class _FloatingActionBtn extends State<FloatingActionBtn>{
       backgroundColor: Color(widget.bGcolor),
       onPressed: widget.onPressed,
       heroTag: null,
+      elevation: 0.0,
     );
   }
 

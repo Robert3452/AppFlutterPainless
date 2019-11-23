@@ -5,7 +5,6 @@ import 'package:flutter_app_painless/widgets/floating_action_btn.dart';
 class VoiceRecognition extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _VoiceRecognition();
   }
 }
@@ -13,7 +12,6 @@ class VoiceRecognition extends StatefulWidget {
 class _VoiceRecognition extends State<VoiceRecognition> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

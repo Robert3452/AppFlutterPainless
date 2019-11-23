@@ -7,7 +7,7 @@ class Nav extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
-        height: screenHeight,
+        // // height: screenHeight,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0XFF000000), Colors.black],
@@ -56,10 +56,10 @@ class Nav extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
+              Container(                
                 margin: EdgeInsets.only(
-                    top: screenHeight * 0.59,
-                    bottom: screenHeight *0.01),
+                  top: screenHeight * 0.59,
+                ),
                 child: FloatingButtons(),
               )
             ],
