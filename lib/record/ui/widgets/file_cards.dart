@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_painless/record/bloc/storage.dart';
+import 'package:flutter_app_painless/record/storage.dart';
 import 'package:flutter_app_painless/widgets/floating_action_btn.dart';
 import 'package:path/path.dart' as p;
 
@@ -12,6 +12,20 @@ class FileCards extends StatefulWidget {
 
 class _FileCards extends State<FileCards> {
   Storage storage = Storage();
+
+  @override
+  void initState(){
+    super.initState();
+    check();
+  }
+
+  void check ()async{
+    bool exist = await storage.checkRepository();
+    // print ('Prueba $exist');
+    if(!exist){
+      storage.createDirectory();
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Padding(
