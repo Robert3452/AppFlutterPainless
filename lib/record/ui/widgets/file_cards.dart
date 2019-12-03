@@ -21,7 +21,6 @@ class _FileCards extends State<FileCards> {
 
   void check ()async{
     bool exist = await storage.checkRepository();
-    // print ('Prueba $exist');
     if(!exist){
       storage.createDirectory();
     }

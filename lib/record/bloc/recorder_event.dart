@@ -1,33 +1,27 @@
-import 'dart:async';
-
 import 'package:equatable/equatable.dart';
-// import 'package:flutter/rendering.dart';
-// import 'package:flutter_app_painless/record/ui/screens/recorder.dart';
 
 abstract class RecorderEvent extends Equatable {
   const RecorderEvent();
 }
 
-class InitParamEvent extends RecorderEvent{
-  @override
-  List<Object> get props =>[];
-}
-
-class DoRecordEvent extends RecorderEvent{
+class DoRecordEvent extends RecorderEvent {
   @override
   List<Object> get props => [];
-
 }
-class OnRecordEvent extends RecorderEvent{
+
+class OnRecordEvent extends RecorderEvent {
   @override
   List<Object> get props => [];
-
 }
-class DoStopRecordEvent extends RecorderEvent{
-  // final StreamSubscription recorderSubscription;
-  // final StreamSubscription dbPeakSubscription;
-  // DoStopRecordEvent(this.dbPeakSubscription, this.recorderSubscription);
+
+class DoStopRecordEvent extends RecorderEvent {
   @override
   List<Object> get props => [];
-  
+}
+//Evento de inicio de reconocimiento de voz
+class VoiceRecognizing extends RecorderEvent{
+  final String text;
+  VoiceRecognizing(this.text);
+  @override
+  List<Object> get props => [text];
 }

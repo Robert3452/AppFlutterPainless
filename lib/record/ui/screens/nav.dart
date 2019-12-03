@@ -3,6 +3,7 @@ import 'package:flutter_app_painless/record/bloc/bloc.dart';
 import 'package:flutter_app_painless/record/ui/widgets/floating_buttons.dart';
 import 'package:flutter_app_painless/record/ui/widgets/screen_recorder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_app_painless/record/bloc/http_logic.dart';
 
 class Nav extends StatelessWidget {
   @override
@@ -24,6 +25,7 @@ class Nav extends StatelessWidget {
           ),
           BlocProvider(
             builder: (_) => RecorderBloc(
+              logic: SimpleHttpLogic(),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,

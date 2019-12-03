@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app_painless/record/bloc/bloc.dart';
-import 'package:flutter_app_painless/widgets/floating_action_btn.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -20,7 +19,6 @@ class ScreenRecorder extends StatefulWidget {
 
 class _ScreenRecorder extends State<ScreenRecorder> {
   bool _isRecording = false;
-  RecorderBloc _blocRec;
   StreamSubscription _recorderSubscription;
   StreamSubscription _dbPeakSubscription;
   String _recorderTxt = "00:00:00";
@@ -33,17 +31,17 @@ class _ScreenRecorder extends State<ScreenRecorder> {
     super.initState();
     // initSpeechRecognizer();
     storage = Storage();
-    
     flutterSound = new FlutterSound();
     flutterSound.setSubscriptionDuration(0.01);
     flutterSound.setDbPeakLevelUpdate(0.8);
     flutterSound.setDbLevelEnabled(true);
     initializeDateFormatting();
   }
-  void check ()async{
+
+  void check() async {
     bool exist = await storage.checkRepository();
     // print ('Prueba $exist');
-    if(!exist){
+    if (!exist) {
       storage.createDirectory();
     }
   }
@@ -100,6 +98,12 @@ class _ScreenRecorder extends State<ScreenRecorder> {
       if (state is StopRecorderState) {
         stopRecorder();
         _isRecording = false;
+      }
+      if(state is RecognizingState){
+        if(state.result){
+          _isRecording = true;
+          startRecorder();
+        }
       }
       _onRecord();
       return Container(
